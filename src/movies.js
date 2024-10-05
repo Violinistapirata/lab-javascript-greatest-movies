@@ -2,12 +2,24 @@
 // _Bonus_: It seems some of the directors had directed multiple movies so they will pop up multiple times in the array of directors.
 // How could you "clean" a bit this array and make it unified (without duplicates)?
 function getAllDirectors(moviesArray) {
-    const directorsArray = moviesArray.map((movie) => movie.director);
-    return directorsArray;
+  const directorsArray = moviesArray.map((movie) => movie.director);
+  return directorsArray;
 }
 
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct?
-function howManyMovies(moviesArray) {}
+function howManyMovies(moviesArray) {
+  /*const spielbergMovies = moviesArray.filter((movies) => movies.director === "Steven Spielberg")
+    console.log(spielbergMovies);
+
+    const dramaMovies = spielbergMovies.filter(movie => movie.genre === "Drama" && movie.genre.length === 1 )
+    return dramaMovies.length;*/
+
+  const dramaSpielberg = moviesArray.filter(
+    (movies) =>
+      movies.director === "Steven Spielberg" && movies.genre.includes("Drama")
+  );
+  return dramaSpielberg.length;
+}
 
 // Iteration 3: All scores average - Get the average of all scores with 2 decimals
 function scoresAverage(moviesArray) {}
