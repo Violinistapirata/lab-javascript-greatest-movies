@@ -22,7 +22,27 @@ function howManyMovies(moviesArray) {
 }
 
 // Iteration 3: All scores average - Get the average of all scores with 2 decimals
-function scoresAverage(moviesArray) {}
+function scoresAverage(moviesArray) {
+    if (moviesArray.length === 0){
+        return 0;
+    }
+    const scoredMovies = moviesArray.map(movie => {
+        if (!movie.score) {
+            movie.score = 0;
+            return movie;
+        } else {
+            return movie;
+        }
+    });
+    
+    const scoreAverage = Math.ceil(scoredMovies.reduce((acc, curr) => acc + curr.score, 0) / scoredMovies.length * 100) / 100;
+    return scoreAverage;
+}
+
+const number = [8, 9, 9];
+const twoDecimals = Math.ceil(number.reduce((acc, curr) => acc + curr) / number.length * 100) /100;
+
+console.log(twoDecimals);
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
 function dramaMoviesScore(moviesArray) {}
