@@ -8,13 +8,8 @@ function getAllDirectors(moviesArray) {
 
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct?
 function howManyMovies(moviesArray) {
-  /*const spielbergMovies = moviesArray.filter((movies) => movies.director === "Steven Spielberg")
-    console.log(spielbergMovies);
-
-    const dramaMovies = spielbergMovies.filter(movie => movie.genre === "Drama" && movie.genre.length === 1 )
-    return dramaMovies.length;*/
-
-  const dramaSpielberg = moviesArray.filter(
+  
+const dramaSpielberg = moviesArray.filter(
     (movies) =>
       movies.director === "Steven Spielberg" && movies.genre.includes("Drama")
   );
@@ -45,7 +40,33 @@ const twoDecimals = Math.ceil(number.reduce((acc, curr) => acc + curr) / number.
 console.log(twoDecimals);
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
-function dramaMoviesScore(moviesArray) {}
+function dramaMoviesScore(moviesArray) {
+
+
+const dramaMovies = moviesArray.filter(movie => movie.genre.includes("Drama"))
+
+if(dramaMovies.length === 0){
+    return 0;
+}
+
+const dramaAverageScore = dramaMovies.reduce((acum, curr)=> acum + curr.score, 0)/ dramaMovies.length
+
+
+// return Number(Number.parseFloat(dramaAverageScore).toFixed(2))
+
+return Number.parseFloat(dramaAverageScore).toFixed(2) * 1;
+}
+
+dramaMoviesScore([
+    { genre: ['Drama'], score: 8 },
+    { genre: ['Drama'], score: 9 },
+    { genre: ['Drama'], score: 7 }
+  ])
+console.log(dramaMoviesScore([
+    { genre: ['Drama'], score: 8 },
+    { genre: ['Drama'], score: 9 },
+    { genre: ['Drama'], score: 7 }
+  ]));
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
 function orderByYear(moviesArray) {}
