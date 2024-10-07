@@ -100,12 +100,12 @@ function orderAlphabetically(moviesArray) {
 
   console.log(titleArray);
 
+  titleArray.sort();
+
   if (titleArray.length > 20) {
     titleArray.splice(20);
   }
-
-  titleArray.sort();
-
+  
   return titleArray;
   
 
@@ -136,7 +136,45 @@ function orderAlphabetically(moviesArray) {
  */
 }
 
-console.log(orderAlphabetically(movies));
+console.log(orderAlphabetically([
+    { title: 'aab' },
+    { title: 'bab' },
+    { title: 'acb' },
+    { title: 'aaa' },
+    { title: 'bbb' },
+    { title: 'anc' },
+    { title: 'kns' },
+    { title: 'zds' },
+    { title: 'pow' },
+    { title: 'gda' },
+    { title: 'res' },
+    { title: 'ter' },
+    { title: 'bca' },
+    { title: 'ccc' },
+    { title: 'bbt' },
+    { title: 'qas' },
+    { title: 'kmn' },
+    { title: 'frt' },
+    { title: 'afb' },
+    { title: 'agb' },
+    { title: 'apo' },
+    { title: 'poa' },
+    { title: 'cdf' },
+    { title: 'sea' },
+    { title: 'lom' },
+    { title: 'acs' },
+    { title: 'qas' },
+    { title: 'mns' },
+    { title: 'bvc' },
+    { title: 'gha' },
+    { title: 'lkj' },
+    { title: 'era' },
+    { title: 'ert' },
+    { title: 'tex' },
+    { title: 'zas' },
+    { title: 'pol' }
+  ]));
+
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
 function turnHoursToMinutes(moviesArray) {}
 
