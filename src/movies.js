@@ -104,9 +104,11 @@ function orderAlphabetically(moviesArray) {
     titleArray.splice(20);
   }
 
-  titleArray.sort((a, b) => a.localeCompare(b));
+  titleArray.sort();
 
   return titleArray;
+
+  
 
   /*const first20 = [];
   for (let i = 0; i < 20; i++) {
