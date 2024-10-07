@@ -107,6 +107,7 @@ function orderAlphabetically(moviesArray) {
   titleArray.sort();
 
   return titleArray;
+  
 
   
 
